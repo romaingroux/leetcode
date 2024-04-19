@@ -1,0 +1,13 @@
+{
+    "image": "rgroux/cpp-dev-ubuntu@sha256:ccf5b7ec18a06965f762af7c59e7429d2fb33c5b04ad915f077e7118b34b5daf",
+    "customizations": {
+        "vscode": {
+            "extensions": ["vscode.cpptools", 
+                           "ms-vscode.cpptools-extension-pack",
+                           "ms-vscode.cpptools-themes",
+                           "jeff-hykin.better-cpp-syntax",
+                           "virejdasani.in-your-face"]
+        }
+    },
+    "forwardPorts": [3000]
+}
