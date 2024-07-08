@@ -99,6 +99,16 @@ class Solution
         
         return s ;
     }
+
+    std::string reverseWordsSTL(std::string s)
+    {
+        s.erase(0, s.find_first_not_of(' ' , 0)) ; // leading spaces
+        s.erase(s.find_last_not_of(' ')+1) ;       // trailing spaces
+
+        std::cerr << "-" << s << "-" << std::endl ;
+
+        return s ;
+    }
 } ;
 
 
@@ -112,5 +122,8 @@ int main()
     assert(s.reverseWords(s1) == "blue is sky the") ;
     assert(s.reverseWords(s2) == "world hello") ;
     assert(s.reverseWords(s3) == "example good a") ;
+    
+    // s.reverseWordsSTL(s2) ;
+
     return 0 ;
 } ;
