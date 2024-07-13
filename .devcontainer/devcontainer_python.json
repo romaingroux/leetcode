@@ -1,0 +1,18 @@
+{  "image": "rgroux/python-dev-ubuntu@sha256:d4e62e22990f19ba1adeadc11e1ab2348a50a2cd4f409b8ac04ad7eec2d6af6b",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.vscode-pylance",
+                "ms-python.python",
+                "donjayamanne.python-environment-manager",
+                "tushortz.python-extended-snippets",
+                "davidanson.vscode-markdownlint",
+                "donjayamanne.githistory",
+                "zainchen.json",
+                "virejdasani.in-your-face"
+            ]
+        }
+    },
+    "forwardPorts": [3000]
+}
