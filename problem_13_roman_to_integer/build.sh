@@ -6,4 +6,4 @@ g++ -std=c++2a \
     -Wfatal-errors \
     -pedantic \
     -pg \
-    -o problem_39 ./problem_39.cpp
+    -o problem_13 ./problem_13.cpp
