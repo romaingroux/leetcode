@@ -84,6 +84,8 @@ class Solution:
                  nums: tp.List[int]) \
         -> tp.List[tp.List[int]]:
         """
+        Finds all triplets of elements in nums summing to 0.
+        Works in O(N^2) time.
         """
 
         nums = sorted(nums)
