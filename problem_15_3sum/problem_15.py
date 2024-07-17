@@ -119,15 +119,14 @@ class Solution:
 if __name__ == "__main__":
 
     s = Solution()
-    # assert(sorted(s.threeSum([-1,0,1,2,-1,-4])) == 
-    #        sorted([[-1, 0, 1], [-1, -1, 2]]))
-    # assert(s.threeSum([0,1,1]) == list())
-    # assert(s.threeSum([0,0,0]) == [[0,0,0]])
-    # assert(s.threeSum([0,0,0,0]) == [[0,0,0]])
-    # assert(sorted(s.threeSum([-1,0,1,2,-1,-4])) == sorted([[-1,-1,2],[-1,0,1]]))
-    # assert(sorted(s.threeSum([-1,0,1,2,-1,-4,-2,-3,3,0,4])) == 
-    #        sorted([[-4,0,4],[-4,1,3],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-1,-1,2],[-1,0,1]]))
+    assert(sorted(s.threeSum([-1,0,1,2,-1,-4])) == 
+           sorted([[-1, 0, 1], [-1, -1, 2]]))
+    assert(s.threeSum([0,1,1]) == list())
+    assert(s.threeSum([0,0,0]) == [[0,0,0]])
+    assert(s.threeSum([0,0,0,0]) == [[0,0,0]])
+    assert(sorted(s.threeSum([-1,0,1,2,-1,-4])) == sorted([[-1,-1,2],[-1,0,1]]))
+    assert(sorted(s.threeSum([-1,0,1,2,-1,-4,-2,-3,3,0,4])) == 
+           sorted([[-4,0,4],[-4,1,3],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-1,-1,2],[-1,0,1]]))
 
-    # assert(s.threeSum([-2,0,0,2,2]) == [[-2,0,2]])
-    print(s.threeSum([-2,0,0,2,2]))
+    assert(s.threeSum([-2,0,0,2,2]) == [[-2,0,2]])
 
