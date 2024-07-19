@@ -107,7 +107,7 @@ class Solution:
             list3 = list3.next
 
         # terminate
-        if list1.next is not None:
+        if list1 is not None:
             list3.next = list1
         else:
             list3.next = list2
