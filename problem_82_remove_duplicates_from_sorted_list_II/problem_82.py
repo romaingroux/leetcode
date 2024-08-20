@@ -81,7 +81,7 @@ def print_list(head: tp.Optional[ListNode]) \
     Args:
         head: the head node of the list.
     Returns:
-        None
+        Non
     """
     s = []
     while head:
