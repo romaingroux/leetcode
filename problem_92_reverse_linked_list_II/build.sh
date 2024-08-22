@@ -6,4 +6,4 @@ g++ -std=c++2a \
     -Wfatal-errors \
     -pedantic \
     -pg \
-    -o problem_${problem_number} ./problem_${problem_number}.cpp
+    -o problem_92 ./problem_92.cpp
