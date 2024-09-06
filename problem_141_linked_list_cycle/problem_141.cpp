@@ -48,10 +48,10 @@ Follow up: Can you solve it using O(1) (i.e. constant) memory?
 /**
  * Definition for singly-linked list.
  */
- struct ListNode {
+ struct ListNodeDouble {
      int val;
-     ListNode *next;
-     ListNode(int x) : val(x), next(NULL) {}
+     ListNodeDouble *next;
+     ListNodeDouble(int x) : val(x), next(NULL) {}
  } ;
  
 
@@ -133,7 +133,7 @@ Follow up: Can you solve it using O(1) (i.e. constant) memory?
 
 std::ostream& 
 operator << (std::ostream& stream, 
-             const ListNode& node)
+             const ListNodeDouble& node)
 {
     std::string next_str = node.next == nullptr ? 
                             "NONE" :
@@ -150,16 +150,16 @@ operator << (std::ostream& stream,
  * @param values the values of the nodes.
  * @returns A pointer to the head of the list.
  */
-ListNode*
+ListNodeDouble*
 construct_list(const std::vector<int>& values)
 {   
     if(values.size() == 0)
     {   return nullptr ; }
 
-    ListNode* head = new ListNode(values[0]) ;
-    ListNode* current = head ;
+    ListNodeDouble* head = new ListNodeDouble(values[0]) ;
+    ListNodeDouble* current = head ;
     for(size_t i=1; i<values.size(); i++)
-    {   current->next = new ListNode(values[i]) ;
+    {   current->next = new ListNodeDouble(values[i]) ;
         current = current->next ;
     }
     return head ;
@@ -170,11 +170,11 @@ construct_list(const std::vector<int>& values)
  * @param head the head of the list of interest.
  */
 void
-delete_list(ListNode* head)
+delete_list(ListNodeDouble* head)
 {
-    ListNode* current = head ;
+    ListNodeDouble* current = head ;
     while(current)
-    {   ListNode* next = current->next ;
+    {   ListNodeDouble* next = current->next ;
         if(current != nullptr)
         {   delete current ; }
         current = next ;
@@ -189,9 +189,9 @@ delete_list(ListNode* head)
  * @return the stream.
  */
 std::ostream&
-print_list(std::ostream& stream, ListNode* head)
+print_list(std::ostream& stream, ListNodeDouble* head)
 {
-    ListNode* current = head ;
+    ListNodeDouble* current = head ;
     while(current != nullptr)
     {   stream << *current ;
         if(current->next != nullptr)
@@ -205,7 +205,7 @@ print_list(std::ostream& stream, ListNode* head)
 
 class Solution {
 public:
-    bool hasCycle(ListNode *head) {
+    bool hasCycle(ListNodeDouble *head) {
         // no list
         if(head == nullptr)
         {   return false ; }
@@ -213,8 +213,8 @@ public:
         else if(head->next == nullptr)
         {   return false ; }
 
-        ListNode* current(head) ;
-        std::unordered_set<ListNode*> set ;
+        ListNodeDouble* current(head) ;
+        std::unordered_set<ListNodeDouble*> set ;
         while(current != nullptr)
         {   // node has already been seen
             if(set.find(current) != set.end())
@@ -242,9 +242,9 @@ int main()
     assert(s.hasCycle(nullptr) == false) ;
 
     // no cycle
-    ListNode node_0(0) ;
-    ListNode node_1(1) ;
-    ListNode node_2(2) ;
+    ListNodeDouble node_0(0) ;
+    ListNodeDouble node_1(1) ;
+    ListNodeDouble node_2(2) ;
     node_0.next = &node_1 ;
     node_1.next = &node_2 ;
     assert(s.hasCycle(&node_0) == false) ;
